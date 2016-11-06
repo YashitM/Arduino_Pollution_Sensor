@@ -57,9 +57,6 @@ void loop(){
   else {
     Serial.print("normal: ");
     Serial.println(Dustlevel,DEC);
-    analogWrite(redpin,255);
-    analogWrite(bluepin,255);
-    analogWrite(greenpin,255);
   }
   delay(2000);
 }
