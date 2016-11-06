@@ -1,10 +1,10 @@
-int greenpin = 12;    
+int greenpin = 7;    
 float gas;
-int bluepin = 11;
+int bluepin = 6;
 float voltage = 0;
 float actualvoltage = 0;
 float Dustlevel;
-int redpin = 10;
+int redpin = 5;
   
 void setup(){
   Serial.begin(9600);
@@ -69,8 +69,6 @@ void setColor(int red, int green,int blue)
 {
   analogWrite(redpin, red);
   analogWrite(bluepin, blue);
-  analogWrite(redpin, red);
-  
-  
+  analogWrite(redpin, red); 
 }
 
