@@ -1,24 +1,27 @@
-//#include "MQ135.h"
-
 int ppm;
-int ledpin = 5;
+
+int red=10;
+int green=12;
+int blue=11;
 void setup()
 {
-  Serial.begin(9600);      // sets the serial port to 9600
-  pinMode(ledpin, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop()
 {
   ppm = analogRead(0); 
-  Serial.print(ppm, DEC); 
-  Serial.println(ppm,2);
   if (ppm>500) {
-    digitalWrite(ledpin, HIGH);
+    Serial.println("high: ");
+    Serial.print (ppm);
+    Serial.println("");
+    analogWrite(red,255);
   }
   else {
-    digitalWrite(ledpin, LOW);
+    Serial.print ("low: ");
+    Serial.print (ppm);
+    Serial.println();
+    analogWrite(green,255);
   }
-
-  delay(100);
+  delay(1000);
 }
