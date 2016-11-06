@@ -25,7 +25,6 @@ void loop(){
   voltage = analogRead(1);
   actualvoltage = voltage * (5.0 / 1024.0);
   Dustlevel = (0.17 * actualvoltage - 0.1)*-1000;
-  //Serial.println(Dustlevel);
 
   if (Dustlevel>600){
     //display_led(dangerous);
