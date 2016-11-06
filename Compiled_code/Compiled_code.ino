@@ -27,17 +27,17 @@ void loop(){
   Dustlevel = 0.17 * actualvoltage - 0.1;
   Serial1.print("Dust");
   Serial1.println(Dustlevel);
-  if(Dustlevel>100)
+  if(Dustlevel>131)
   {
     Serial.print("Danger");
   }
-  else if (Dustlevel>50 && Dustlevel<100)
+  if(Dustlevel>61 && Dustlevel<=130)
   {
     Serial.print("Be careful");
   }
-  else
+  else if (Dustlevel<60)
   {
-    Serial.print("Everything is fine! :D")
+    Serial.print("It's alright");
   }
   delay(1000);
 }
