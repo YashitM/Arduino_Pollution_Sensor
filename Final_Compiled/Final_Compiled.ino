@@ -21,7 +21,7 @@ void loop(){
     Serial.println (gas,DEC);
     }
 
-  delay(5000);
+  delay(2000);
   voltage = analogRead(1);
   actualvoltage = voltage * (5.0 / 1024.0);
   Dustlevel = (0.17 * actualvoltage - 0.1)*-1000;
@@ -61,14 +61,6 @@ void loop(){
     analogWrite(bluepin,255);
     analogWrite(greenpin,255);
   }
-  delay(5000);
-}
-
-
-void setColor(int red, int green,int blue)
-{
-  analogWrite(redpin, red);
-  analogWrite(bluepin, blue);
-  analogWrite(redpin, red); 
+  delay(2000);
 }
 
